@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<script src="lib/angular.min.js"></script>
+<script src="app.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="customersCtrl">
+<ul>
+  <li ng-repeat="x in myData">
+    {{ x.t + ' -- ' + x.v.toFixed(3) }}
+  </li>
+</ul>
+</div>
+<script>
+let isoString = "2023-01-18T19:34:57Z";
+let date = new Date(isoString);
+let localTimeString = date.toLocaleString();
+console.log(localTimeString);
+let now = new Date();
+let offset = now.getTimezoneOffset();
+console.log(now);
+console.log(offset);
+</script>
+</body>
+</html>
